@@ -741,6 +741,7 @@ body{
   border-radius:28px;
   box-shadow:
   0 15px 40px rgba(0,0,0,0.06);
+  transition:0.3s;
 
   transition:0.4s;
 
@@ -752,7 +753,9 @@ body{
 }
 
 .testimonial-card:hover{
-  transform:translateY(-10px);
+  transform:translateY(-8px);
+  box-shadow:
+  0 20px 40px rgba(0,0,0,0.08);
 }
 
 .testimonial-text{
@@ -760,6 +763,16 @@ body{
   color:#444;
   margin-bottom:40px;
   font-size:17px;
+}
+
+.stars{
+  color:#f4b400;
+
+  font-size:22px;
+
+  margin-bottom:20px;
+
+  letter-spacing:4px;
 }
 
 .client-info{
