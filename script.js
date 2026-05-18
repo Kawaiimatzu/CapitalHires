@@ -6,10 +6,28 @@ window.addEventListener("scroll", () => {
 
   let currentScroll = window.pageYOffset;
 
-  if(currentScroll > lastScroll){
+  /* HIDE HEADER */
+
+  if(currentScroll > lastScroll && currentScroll > 80){
+
     header.classList.add("hide");
+
   }else{
+
     header.classList.remove("hide");
+
+  }
+
+  /* SHRINK HEADER */
+
+  if(currentScroll > 50){
+
+    header.classList.add("scrolled");
+
+  }else{
+
+    header.classList.remove("scrolled");
+
   }
 
   lastScroll = currentScroll;
@@ -90,5 +108,19 @@ taskForm.addEventListener("submit", function(e){
     console.log(error);
 
   });
+
+});
+
+/* MOBILE MENU */
+
+const menuToggle =
+document.querySelector(".menu-toggle");
+
+const navLinks =
+document.querySelector(".nav-links");
+
+menuToggle.addEventListener("click", () => {
+
+  navLinks.classList.toggle("active");
 
 });
