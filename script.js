@@ -82,32 +82,56 @@ toggleBtns.forEach((btn)=>{
 
 emailjs.init("Cmb3XCHZPVMRY4rSM");
 
-const taskForm = document.getElementById("taskForm");
+const form = document.getElementById("taskForm");
+const button = form.querySelector("button");
+const popup = document.getElementById("successPopup");
 
-taskForm.addEventListener("submit", function(e){
+form.addEventListener("submit", async (e) => {
 
   e.preventDefault();
 
-  emailjs.sendForm(
-    "service_w4v9dkb",
-    "template_8e7dw7s",
-    this
-  )
+  const originalText = button.innerHTML;
 
-  .then(() => {
+  button.disabled = true;
+  button.innerHTML = "Submitting...";
 
-    alert("Task submitted successfully!");
+  try {
 
-    taskForm.reset();
+    await emailjs.sendForm(
+      "service_w4v9dkb",
+      "template_8e7dw7s",
+      form
+    );
 
-  })
+    button.innerHTML = "✓ Submitted";
 
-  .catch((error) => {
+    popup.classList.add("show");
 
-    alert(JSON.stringify(error));
+    form.reset();
+
+    setTimeout(() => {
+
+      popup.classList.remove("show");
+
+      button.disabled = false;
+      button.innerHTML = originalText;
+
+    }, 3000);
+
+  } catch(error){
+
+    button.innerHTML = "Something went wrong";
+
+    setTimeout(() => {
+
+      button.disabled = false;
+      button.innerHTML = originalText;
+
+    }, 2500);
+
     console.log(error);
 
-  });
+  }
 
 });
 

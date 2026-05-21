@@ -45,9 +45,25 @@
   required
   >
 
+<select name="va_type" required>
+
+  <option value="" disabled selected hidden>
+    Select VA Type
+  </option>
+
+  <option value="Full-Time VA">
+    Full-Time VA
+  </option>
+
+  <option value="Part-Time VA">
+    Part-Time VA
+  </option>
+
+</select>
+
   <textarea 
   name="details"
-  placeholder="Tell us what kind of support you need"
+  placeholder="What tasks or support do you need help with?"
   ></textarea>
 
   <button class="btn" type="submit">
@@ -149,3 +165,5 @@
 </script>
 
 <script src="../form.js"></script>
+
+

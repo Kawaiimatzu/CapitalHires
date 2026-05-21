@@ -154,18 +154,19 @@ linear-gradient(
 .hero-buttons{
   display:flex;
   justify-content:center;
-  gap:20px;
-  flex-wrap:wrap;
+  align-items:center;
+  gap:18px;
   margin-top:35px;
 }
 
 .secondary-btn{
-    padding:16px 28px;
+    padding:16px 26px;
   font-size:15px;
   background:#0d5b38;
   color:white;
   box-shadow:
   0 15px 40px rgba(13,91,56,0.25);
+   transition:all 0.3s ease;
 }
 
 .secondary-btn:hover{
@@ -975,6 +976,41 @@ linear-gradient(
   cursor:not-allowed;
 }
 
+.task-form select{
+  width:100%;
+  height:56px;
+  padding:0 18px;
+  margin-bottom:18px;
+
+  border:1px solid #d8d8d8;
+  border-radius:14px;
+
+  background-color:#fff;
+
+  font-size:16px;
+  font-weight:500;
+  color:#555;
+
+  outline:none;
+  cursor:pointer;
+
+  appearance:none;
+  -webkit-appearance:none;
+  -moz-appearance:none;
+
+  transition:0.3s ease;
+
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='none' stroke='%2300663a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='3 5 7 9 11 5'/%3E%3C/svg%3E");
+
+  background-repeat:no-repeat;
+  background-position:right 18px center;
+}
+
+.task-form select:focus{
+  border-color:#0d6b3f;
+  box-shadow:0 0 0 3px rgba(13,107,63,0.08);
+}
+
 .task-form{
   background:white;
   padding:40px;
@@ -1393,6 +1429,39 @@ margin-top:50px;
 
 @media(max-width:768px){
 
+  .task-form{
+    padding:28px;
+    border-radius:18px;
+  }
+
+  .task-form h2{
+    font-size:38px;
+    margin-bottom:18px;
+  }
+
+  .task-form input,
+  .task-form textarea,
+  .task-form select{
+    height:56px;
+    font-size:15px;
+    border-radius:14px;
+  }
+
+  .task-form textarea{
+    height:120px;
+    padding-top:18px;
+  }
+
+  .task-form button{
+    width:100%;
+  }
+
+  .task-process{
+    justify-content:center;
+    text-align:center;
+    line-height:1.8;
+  }
+
   .footer-top{
     grid-template-columns:1fr;
 
@@ -1477,33 +1546,26 @@ margin-top:50px;
   position:fixed;
   top:30px;
   right:30px;
-
-  background:#166534;
+  background:#0f6b3f;
   color:#fff;
-
-  padding:18px 28px;
-
+  padding:18px 26px;
   border-radius:14px;
-
-  font-size:15px;
   font-weight:600;
-
-  box-shadow:
-  0 10px 30px rgba(0,0,0,.15);
+  font-size:15px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.18);
 
   opacity:0;
-
+  visibility:hidden;
   transform:translateY(-20px);
 
-  pointer-events:none;
+  transition:all .35s ease;
 
-  transition:.4s ease;
-
-  z-index:999999;
+  z-index:9999;
 }
 
 .success-popup.show{
   opacity:1;
+  visibility:visible;
   transform:translateY(0);
 }
 
