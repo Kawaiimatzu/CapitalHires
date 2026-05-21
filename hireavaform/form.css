@@ -1,0 +1,335 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Plus Jakarta Sans',sans-serif;
+}
+
+.hire-va{
+  position:relative;
+  overflow:hidden;
+}
+
+.hire-va::before{
+  content:"";
+
+  position:absolute;
+
+  width:500px;
+  height:500px;
+
+  background:
+  rgba(13,107,63,0.05);
+
+  border-radius:50%;
+
+  filter:blur(100px);
+
+  top:-200px;
+  right:-120px;
+}
+
+.hire-container{
+  width:92%;
+  max-width:1350px;
+  margin:auto;
+
+  display:grid;
+  grid-template-columns:0.95fr 1.05fr;
+  gap:45px;
+  align-items:start;
+}
+
+/* FORM */
+
+.hire-form-box{
+  background:white;
+
+  padding:50px;
+
+  border-radius:32px;
+
+  box-shadow:
+  0 20px 60px rgba(0,0,0,0.08);
+
+  position:sticky;
+  top:40px;
+}
+
+.hire-label{
+  display:inline-block;
+
+  font-size:13px;
+  font-weight:700;
+
+  letter-spacing:2px;
+
+  color:#0d6b3f;
+
+  margin-bottom:18px;
+}
+
+.hire-form-box h1{
+  font-size:58px;
+
+  line-height:0.95;
+
+  font-weight:800;
+
+  letter-spacing:-3px;
+
+  margin-bottom:22px;
+
+  color:#111;
+
+  max-width:500px;
+}
+
+.hire-form-box p{
+  font-size:17px;
+  line-height:1.8;
+
+  color:#666;
+
+  margin-bottom:35px;
+
+  max-width:520px;
+}
+
+/* INPUTS */
+
+.hire-form input,
+.hire-form textarea,
+.hire-form select{
+  width:100%;
+
+  height:62px;
+
+  padding:0 22px;
+
+  margin-bottom:18px;
+
+  border-radius:18px;
+
+  border:1px solid #e3e3e3;
+
+  background:#fafafa;
+
+  font-size:15px;
+
+  font-family:'Plus Jakarta Sans',sans-serif;
+
+  transition:0.3s ease;
+
+  outline:none;
+}
+
+.hire-form textarea{
+  min-height:150px;
+  padding-top:20px;
+  resize:none;
+}
+
+.hire-form input:focus,
+.hire-form textarea:focus,
+.hire-form select:focus{
+  border-color:#0d6b3f;
+
+  background:white;
+
+  box-shadow:
+  0 0 0 4px rgba(13,107,63,0.08);
+}
+
+/* BUTTON */
+
+.btn{
+  width:100%;
+
+  height:62px;
+
+  border:none;
+
+  border-radius:18px;
+
+  background:
+  linear-gradient(
+    135deg,
+    #f4d06f,
+    #d9ad26
+  );
+
+  color:#0b2418;
+
+  font-size:16px;
+  font-weight:700;
+
+  cursor:pointer;
+
+  transition:0.35s ease;
+
+  box-shadow:
+  0 15px 40px rgba(224,185,79,0.28);
+}
+
+.btn:hover{
+  transform:translateY(-4px);
+
+  box-shadow:
+  0 20px 50px rgba(224,185,79,0.35);
+}
+
+/* RIGHT SIDE */
+
+.hire-right{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:28px;
+}
+
+.corporate-card{
+  background:
+  linear-gradient(
+    135deg,
+    #f8fbf8,
+    #ffffff
+  );
+}
+
+.va-card{
+  background:
+  linear-gradient(
+    to bottom,
+    #ffffff,
+    #fafafa
+  );
+
+  padding:38px;
+
+  border-radius:30px;
+
+  border:1px solid #e8ece8;
+
+  box-shadow:
+  0 10px 30px rgba(0,0,0,0.04);
+
+  transition:0.35s ease;
+
+  position:relative;
+
+  overflow:hidden;
+}
+
+.va-card::before{
+  content:"";
+
+  position:absolute;
+
+  top:0;
+  left:0;
+
+  width:100%;
+  height:5px;
+
+  background:
+  linear-gradient(
+    to right,
+    #0d6b3f,
+    #1f9d63
+  );
+}
+
+.va-card:hover{
+  transform:
+  translateY(-10px);
+
+  box-shadow:
+  0 25px 60px rgba(13,91,56,0.12);
+}
+
+.va-card h3{
+  font-size:32px;
+
+  line-height:1.05;
+
+  margin-bottom:16px;
+
+  color:#0b4d2d;
+
+  font-weight:800;
+
+  letter-spacing:-1px;
+}
+
+.va-card p{
+  color:#666;
+
+  line-height:1.9;
+
+  margin-bottom:28px;
+
+  font-size:15px;
+}
+
+.va-card ul{
+  list-style:none;
+
+  display:flex;
+  flex-direction:column;
+
+  gap:16px;
+
+  padding:0;
+}
+
+.va-card li{
+  color:#18442e;
+
+  font-weight:600;
+
+  line-height:1.6;
+
+  display:flex;
+  align-items:center;
+
+  gap:10px;
+
+  font-size:15px;
+}
+/* MOBILE */
+
+@media(max-width:1100px){
+
+  .hire-container{
+    grid-template-columns:1fr;
+  }
+
+  .hire-form-box{
+    position:relative;
+    top:auto;
+  }
+
+  .hire-form-box h1{
+    font-size:48px;
+  }
+}
+
+@media(max-width:768px){
+
+  .hire-right{
+    grid-template-columns:1fr;
+  }
+
+  .hire-form-box{
+    padding:35px;
+  }
+
+  .hire-form-box h1{
+    font-size:2.8rem;
+    line-height:1;
+  }
+
+  .btn{
+    width:100%;
+  }
+}

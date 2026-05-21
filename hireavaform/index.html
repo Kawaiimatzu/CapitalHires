@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+  content="width=device-width, initial-scale=1.0">
+
+  <title>
+    Hire A VA | CapitalHires
+  </title>
+
+  <link rel="stylesheet"
+  href="form.css">
+
+</head>
+
+<body>
+
+  <section class="hire-va">
+
+  <div class="hire-container">
+
+    <!-- FORM -->
+    <div class="hire-form-box">
+
+      <span class="hire-label">
+        HIRE A VA
+      </span>
+
+      <h1>
+        Hire A Real Estate Virtual Assistant
+      </h1>
+
+      <p>
+        Choose the best staffing option for your business needs.
+      </p>
+
+      <form class="hire-form" id="taskForm">
+
+        <input type="text"
+        name="full_name"
+        placeholder="Full Name"
+        required>
+
+        <input type="tel"
+        name="phone"
+        placeholder="Phone Number"
+        required>
+
+        <input type="email"
+        name="email"
+        placeholder="Email Address"
+        required>
+
+<select name="va_type" required>
+
+  <option value="" disabled selected hidden>
+    Select Service Type
+  </option>
+
+  <option value="Full-Time VA">
+    Full-Time VA
+  </option>
+
+  <option value="Part-Time VA">
+    Part-Time VA
+  </option>
+
+  <option value="Part-Time Corporate Desk">
+    Part-Time Corporate Desk
+  </option>
+
+  <option value="Full-Time Corporate Desk">
+    Full-Time Corporate Desk
+  </option>
+
+</select>
+
+        <textarea
+        name="details"
+        placeholder="What tasks or support do you need help with?"
+        required></textarea>
+
+<button class="btn" type="submit">
+  Submit Request
+</button>
+
+      </form>
+
+    </div>
+
+<!-- RIGHT SIDE -->
+<div class="hire-right">
+
+  <!-- VA CARD -->
+  <div class="va-card">
+
+    <h3>
+      Part-Time Virtual Assistant
+    </h3>
+
+    <p>
+      Perfect for businesses that need support for a few hours a day.
+    </p>
+
+    <ul>
+      <li>✓ 4 Hours / Day</li>
+      <li>✓ Flexible Schedule</li>
+      <li>✓ Cost-effective</li>
+    </ul>
+
+  </div>
+
+  <!-- VA CARD -->
+  <div class="va-card">
+
+    <h3>
+      Full-Time Virtual Assistant
+    </h3>
+
+    <p>
+      Ideal for businesses that need dedicated full-time support.
+    </p>
+
+    <ul>
+      <li>✓ 8 Hours / Day</li>
+      <li>✓ Full-Time Support</li>
+      <li>✓ Dedicated Assistant</li>
+    </ul>
+
+  </div>
+
+  <!-- CORPORATE DESK -->
+  <div class="va-card corporate-card">
+
+    <h3>
+      Part-Time Corporate Desk
+    </h3>
+
+    <p>
+      Essential coverage for small business teams.
+    </p>
+
+    <ul>
+      <li>✓ Phone Support (4 hours)</li>
+      <li>✓ Light Admin Support</li>
+      <li>✓ Best for Small Teams</li>
+    </ul>
+
+  </div>
+
+  <!-- CORPORATE DESK -->
+  <div class="va-card corporate-card">
+
+    <h3>
+      Full-Time Corporate Desk
+    </h3>
+
+    <p>
+      Complete front office support system.
+    </p>
+
+    <ul>
+      <li>✓ Full Call Coverage</li>
+      <li>✓ Marketing Support</li>
+      <li>✓ Admin Support</li>
+    </ul>
+
+  </div>
+
+</div>
+
+  </div>
+
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+  emailjs.init("Cmb3XCHZPVMRY4rSM");
+</script>
+
+<script src="form.js"></script>
+
+</body>
+</html>
