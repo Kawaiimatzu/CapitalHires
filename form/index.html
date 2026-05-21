@@ -1,162 +1,177 @@
- <!-- TASK -->
+<!DOCTYPE html>
+<html lang="en">
 
-<link rel="stylesheet" href="../style.css"/>
+<head>
 
- <section class="task" id="task">
+  <meta charset="UTF-8">
 
-    <div class="container task-grid">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
-      <form class="task-form" id="taskForm">
+  <title>Task To Go | CapitalHires</title>
 
-  <h2>TASK - TO - GO</h2>
+  <link rel="stylesheet"
+        href="../style.css"/>
 
- <input 
-  type="text" 
-  name="first_name"
-  placeholder="First Name"
-  required
-  >
+</head>
 
-  <input 
-  type="text" 
-  name="last_name"
-  placeholder="Last Name"
-  required
-  >
+<body>
 
-  <input 
-  type="email"
-  name="email"
-  placeholder="Business Email"
-  required
-  >
+<!-- TASK -->
 
-  <input 
-  type="tel"
-  name="phone"
-  placeholder="Phone Number"
-  required
-  >
+<section class="task" id="task">
 
-  <input 
-  type="text"
-  name="company"
-  placeholder="Company / Brokerage Name"
-  required
-  >
+  <div class="container task-grid">
 
-<select name="va_type" required>
+    <form class="task-form" id="taskForm">
 
-  <option value="" disabled selected hidden>
-    Select VA Type
-  </option>
+      <h2>TASK - TO - GO</h2>
 
-  <option value="Full-Time VA">
-    Full-Time VA
-  </option>
+      <input 
+      type="text" 
+      name="first_name"
+      placeholder="First Name"
+      required>
 
-  <option value="Part-Time VA">
-    Part-Time VA
-  </option>
+      <input 
+      type="text" 
+      name="last_name"
+      placeholder="Last Name"
+      required>
 
-</select>
+      <input 
+      type="email"
+      name="email"
+      placeholder="Business Email"
+      required>
 
-  <textarea 
-  name="details"
-  placeholder="What tasks or support do you need help with?"
-  ></textarea>
+      <input 
+      type="tel"
+      name="phone"
+      placeholder="Phone Number"
+      required>
 
-  <button class="btn" type="submit">
-    Submit Task
-  </button>
+      <input 
+      type="text"
+      name="company"
+      placeholder="Company / Brokerage Name"
+      required>
 
-</form>
+      <select name="va_type" required>
 
-<div class="success-popup" id="successPopup">
-  ✓ Consultation Submitted Successfully!
-</div>
+        <option value="" disabled selected hidden>
+          Select VA Type
+        </option>
 
-      <div class="task-right">
+        <option value="Full-Time VA">
+          Full-Time VA
+        </option>
 
-  <span class="section-label">
-    FAST TURNAROUND
-  </span>
+        <option value="Part-Time VA">
+          Part-Time VA
+        </option>
 
-  <h2>
-    Everyday Tasks We Handle
-  </h2>
+      </select>
 
-  <p class="task-text">
-    Real estate support tasks completed
-    quickly, professionally, and efficiently.
-  </p>
+      <textarea 
+      name="details"
+      placeholder="What tasks or support do you need help with?">
+      </textarea>
 
-  <div class="task-services">
+      <button class="btn" type="submit">
+        Submit Task
+      </button>
 
-    <div class="task-box">
-      CRM Cleanup & Organization
+    </form>
+
+    <div class="success-popup" id="successPopup">
+      ✓ Consultation Submitted Successfully!
     </div>
 
-    <div class="task-box">
-      Social Media Posts & Reels
-    </div>
+    <div class="task-right">
 
-    <div class="task-box">
-      Flyer & Brochure Design
-    </div>
+      <span class="section-label">
+        FAST TURNAROUND
+      </span>
 
-    <div class="task-box">
-      Listing Graphics & Carousel Posts
-    </div>
+      <h2>
+        Everyday Tasks We Handle
+      </h2>
 
-    <div class="task-box">
-      MLS Data Entry & Listing Input
-    </div>
+      <p class="task-text">
+        Real estate support tasks completed quickly,
+        professionally, and efficiently.
+      </p>
 
-    <div class="task-box">
-      Property Research & Comps
-    </div>
+      <div class="task-services">
 
-    <div class="task-box">
-      Lead Management & Tagging
-    </div>
+        <div class="task-box">
+          CRM Cleanup & Organization
+        </div>
 
-    <div class="task-box">
-      CRM Import / Export
-    </div>
+        <div class="task-box">
+          Social Media Posts & Reels
+        </div>
 
-    <div class="task-box">
-      Pipeline Setup & Updates
-    </div>
+        <div class="task-box">
+          Flyer & Brochure Design
+        </div>
 
-    <div class="task-box">
-      Open House Coordination
-    </div>
+        <div class="task-box">
+          Listing Graphics & Carousel Posts
+        </div>
 
-    <div class="task-box">
-      Transaction Coordination
-    </div>
+        <div class="task-box">
+          MLS Data Entry & Listing Input
+        </div>
 
-    <div class="task-box">
-      Website & Branding Updates
+        <div class="task-box">
+          Property Research & Comps
+        </div>
+
+        <div class="task-box">
+          Lead Management & Tagging
+        </div>
+
+        <div class="task-box">
+          CRM Import / Export
+        </div>
+
+        <div class="task-box">
+          Pipeline Setup & Updates
+        </div>
+
+        <div class="task-box">
+          Open House Coordination
+        </div>
+
+        <div class="task-box">
+          Transaction Coordination
+        </div>
+
+        <div class="task-box">
+          Website & Branding Updates
+        </div>
+
+      </div>
+
+      <div class="task-process">
+
+        <span>Submit Task</span>
+        <span>→</span>
+
+        <span>We Assign VA</span>
+        <span>→</span>
+
+        <span>Delivered 24-48 hrs</span>
+
+      </div>
+
     </div>
 
   </div>
 
-  <div class="task-process">
-
-    <span>Submit Task</span>
-    <span>→</span>
-
-    <span>We Assign VA</span>
-    <span>→</span>
-
-    <span>Delivered 24-48 hrs</span>
-
-  </div>
-
-</div>
-  </section>
+</section>
 
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
@@ -166,4 +181,5 @@
 
 <script src="../form.js"></script>
 
-
+</body>
+</html>
