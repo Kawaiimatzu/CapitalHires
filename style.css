@@ -160,17 +160,34 @@ linear-gradient(
 }
 
 .secondary-btn{
-    padding:16px 26px;
+  padding:16px 26px;
   font-size:15px;
-  background:#0d5b38;
-  color:white;
+
+  background:
+  linear-gradient(
+    135deg,
+    #f4d06f,
+    #e0b94f
+  );
+
+  color:#0b2418;
+
   box-shadow:
-  0 15px 40px rgba(13,91,56,0.25);
-   transition:all 0.3s ease;
+  0 15px 40px rgba(224,185,79,0.28);
+
+  transition:all 0.3s ease;
 }
 
 .secondary-btn:hover{
-  background:#0b4129;
+
+  background:
+  linear-gradient(
+    135deg,
+    #ffe08a,
+    #d9ad26
+  );
+
+  color:#0b2418;
 }
 
 .hero{
