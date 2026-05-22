@@ -8,28 +8,37 @@ form.addEventListener("submit", async (e) => {
 
   const originalText = button.innerHTML;
 
-  // LOADING
+  /* LOADING */
   button.disabled = true;
   button.innerHTML = "Submitting...";
 
   try {
 
+    /* SEND TO CAPITALHIRES */
     await emailjs.sendForm(
       "service_w4v9dkb",
       "template_8e7dw7s",
-      form
+      form,
+      "Cmb3XCHZPVMRY4rSM"
     );
 
-    // SUCCESS BUTTON
+    /* AUTO REPLY TO CLIENT */
+    await emailjs.sendForm(
+      "service_szrjnqs",
+      "template_rlaif0v",
+      form,
+      "N3FtA-4-Mm8FYPZCC"
+    );
+
+    /* SUCCESS BUTTON */
     button.innerHTML = "✓ Submitted";
 
-    // SHOW POPUP
+    /* SHOW POPUP */
     popup.classList.add("show");
 
-    // RESET FORM
+    /* RESET FORM */
     form.reset();
 
-    // REMOVE POPUP
     setTimeout(() => {
 
       popup.classList.remove("show");
@@ -41,6 +50,8 @@ form.addEventListener("submit", async (e) => {
 
   } catch(error){
 
+    console.log(error);
+
     button.innerHTML = "Something went wrong";
 
     setTimeout(() => {
@@ -50,9 +61,6 @@ form.addEventListener("submit", async (e) => {
 
     }, 2500);
 
-    console.log(error);
-
   }
 
 });
-
