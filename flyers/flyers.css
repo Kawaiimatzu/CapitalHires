@@ -1,0 +1,106 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Plus Jakarta Sans', sans-serif;
+}
+
+body{
+    background:#f7f7f7;
+}
+
+.hero{
+    min-height:400px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:220px 20px 80px;
+}
+
+.hero-content{
+    max-width:900px;
+    margin:auto;
+}
+
+.hero h1{
+    font-size:clamp(40px,6vw,72px);
+    font-weight:800;
+    line-height:1.1;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+    max-width:700px;
+    margin:auto;
+}
+
+.portfolio{
+    max-width:1400px;
+    margin:auto;
+    padding:20px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+    gap:30px;
+}
+
+.flyer-card{
+    overflow:hidden;
+    border-radius:20px;
+    background:white;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.flyer-card:hover{
+    transform:translateY(-10px);
+}
+
+.flyer-card img{
+    width:100%;
+    display:block;
+}
+
+.category-title{
+    text-align:center;
+    margin:80px auto 40px;
+    max-width:800px;
+    padding:0 20px;
+}
+
+.category-title h2{
+    font-size:42px;
+    font-weight:800;
+    color:#1d4d2f;
+    margin-bottom:10px;
+}
+
+.category-title p{
+    color:#666;
+    font-size:18px;
+}
+
+@media (max-width: 768px){
+
+    .hero{
+        padding:180px 20px 50px;
+    }
+
+    .hero h1{
+        font-size:36px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .portfolio{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .flyer-card{
+        border-radius:15px;
+    }
+}
