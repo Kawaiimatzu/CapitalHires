@@ -60,6 +60,11 @@ body{
 .flyer-card img{
     width:100%;
     display:block;
+    transition:.4s ease;
+}
+
+.flyer-card:hover img{
+    transform:scale(1.03);
 }
 
 .category-title{
