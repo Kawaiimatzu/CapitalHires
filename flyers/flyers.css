@@ -28,12 +28,15 @@ body{
     font-weight:800;
     line-height:1.1;
     margin-bottom:20px;
+        color:#111;
+
 }
 
 .hero p{
     font-size:20px;
     max-width:700px;
     margin:auto;
+    color:#555;
 }
 
 .portfolio{
@@ -89,7 +92,7 @@ body{
     font-size:clamp(2.5rem,4vw,4rem);
     font-weight:800;
     letter-spacing:-2px;
-    color:#111;
+    color:#1d1d1d;
     margin-bottom:12px;
 }
 
@@ -112,11 +115,23 @@ body{
 .swiper-slide{
     border-radius:20px;
     overflow:hidden;
+    transition:.3s ease;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.swiper-slide:hover{
+    transform:translateY(-12px);
+    box-shadow:0 20px 40px rgba(0,0,0,.15);
 }
 
 .swiper-slide img{
     width:100%;
     display:block;
+    transition:.4s ease;
+}
+
+.swiper-slide:hover img{
+    transform:scale(1.03);
 }
 
 .swiper-button-next,
