@@ -12,9 +12,11 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-</head>
+    <link rel="stylesheet"href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+
+  </head>
 <body>
 
      <!-- HEADER -->
@@ -58,79 +60,100 @@ class="btn"
 
 <section class="hero">
     <div class="hero-content">
-        <h1>Our Flyer Portfolio</h1>
-        <p>
-            Professionally designed marketing flyers created for businesses,
-            real estate professionals, and service providers.
-        </p>
+<h1>Real Estate & Mortgage Flyer</h1>
+
+<p>
+Explore professionally designed marketing flyers created for real estate agents,
+brokers, lenders, loan officers, and mortgage professionals.
+</p>
     </div>
 </section>
 
 <section class="category-title">
     <h2>Real Estate Flyers</h2>
-    <p>Property listings, open houses, and real estate marketing materials.</p>
-</section>
-
-<section class="portfolio">
-
-    <div class="flyer-card">
-        <img src="../images/Flyers1.png" alt="">
-    </div>
-
-    <div class="flyer-card">
-        <img src="../images/Flyers2.png" alt="">
-    </div>
-
-    <div class="flyer-card">
-        <img src="../images/Flyers3.png" alt="">
-    </div>
-
-</section>
-
-<section class="category-title">
-    <h2>Event Flyers</h2>
-    <p>Promotional materials for seminars, networking events, and business gatherings.</p>
-</section>
-
-<section class="portfolio">
-
-    <div class="flyer-card">
-        <img src="../images/Flyersevent1.png" alt="">
-    </div>
-
-    <div class="flyer-card">
-        <img src="../images/Flyersevent2.png" alt="">
-    </div>
-
-    <div class="flyer-card">
-        <img src="../images/Flyersevent3.png" alt="">
-    </div>
-
-</section>
-
-<section class="category-title">
-    <h2>Travel & Tourism Flyers</h2>
     <p>
-        Promotional flyers designed for travel agencies,
-        vacation packages, tours, and tourism campaigns.
+        Professionally designed listing flyers, open house promotions,
+        and property marketing materials.
     </p>
 </section>
 
-<section class="portfolio">
+<div class="swiper realEstateSwiper">
 
-    <div class="flyer-card">
-        <img src="../images/travel1.png" alt="Travel Flyer">
+    <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+            <img src="../images/Flyers1.png">
+        </div>
+
+        <div class="swiper-slide">
+            <img src="../images/Flyers2.png">
+        </div>
+
+        <div class="swiper-slide">
+            <img src="../images/Flyers3.png">
+        </div>
+
+        <div class="swiper-slide">
+            <img src="../images/Flyers4.png">
+        </div>
+
+        <div class="swiper-slide">
+            <img src="../images/Flyers5.png">
+        </div>
+
+        <div class="swiper-slide">
+            <img src="../images/Flyers6.png">
+        </div>
+
     </div>
 
-    <div class="flyer-card">
-        <img src="../images/travel2.png" alt="Travel Flyer">
-    </div>
+<div class="realestate-next swiper-button-next"></div>
+<div class="realestate-prev swiper-button-prev"></div>
 
-    <div class="flyer-card">
-        <img src="../images/travel3.png" alt="Travel Flyer">
-    </div>
+</div>
 
+<section class="category-title">
+    <h2>Mortgage Flyers</h2>
+    <p>
+        Marketing flyers designed for mortgage professionals,
+        loan officers, lenders, financing programs, and client education campaigns.
+    </p>
 </section>
+
+<div class="swiper mortgageSwiper">
+
+    <div class="swiper-wrapper">
+
+<div class="swiper-slide">
+    <img src="../images/Flyersevent1.png">
+</div>
+
+<div class="swiper-slide">
+    <img src="../images/Flyersevent2.png">
+</div>
+
+<div class="swiper-slide">
+    <img src="../images/Flyersevent3.png">
+</div>
+
+<div class="swiper-slide">
+    <img src="../images/Flyersevent1.png">
+</div>
+
+<div class="swiper-slide">
+    <img src="../images/Flyersevent2.png">
+</div>
+
+<div class="swiper-slide">
+    <img src="../images/Flyersevent3.png">
+</div>
+
+    </div>
+
+    <div class="mortgage-next swiper-button-next"></div>
+    <div class="mortgage-prev swiper-button-prev"></div>
+
+</div>
 
  <!-- FOOTER -->
 
@@ -222,6 +245,8 @@ class="btn"
 
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="flyers.js"></script>
 <script src="../script.js"></script>
 
 </body>

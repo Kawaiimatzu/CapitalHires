@@ -69,21 +69,74 @@ body{
 
 .category-title{
     text-align:center;
-    margin:80px auto 40px;
-    max-width:800px;
+     margin:60px auto 40px;
+    max-width:900px;
     padding:0 20px;
+    position:relative;
+}
+
+.category-title::after{
+    content:"";
+    display:block;
+    width:80px;
+    height:4px;
+    background:#d9ad26;
+    margin:20px auto 0;
+    border-radius:999px;
 }
 
 .category-title h2{
-    font-size:42px;
+    font-size:clamp(2.5rem,4vw,4rem);
     font-weight:800;
-    color:#1d4d2f;
-    margin-bottom:10px;
+    letter-spacing:-2px;
+    color:#111;
+    margin-bottom:12px;
 }
 
 .category-title p{
     color:#666;
     font-size:18px;
+}
+
+.swiper{
+    width:90%;
+    max-width:1400px;
+    margin:auto;
+    position:relative;
+
+    padding-left:60px;
+    padding-right:60px;
+    padding-bottom:120px;
+}
+
+.swiper-slide{
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.swiper-slide img{
+    width:100%;
+    display:block;
+}
+
+.swiper-button-next,
+.swiper-button-prev{
+    background:#d9ad26;
+    color:#111 !important;
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+    cursor:pointer;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after{
+    font-size:22px !important;
+    font-weight:900;
+}
+.mortgageSwiper{
+    margin-bottom:120px;
 }
 
 @media (max-width: 768px){
