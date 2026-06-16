@@ -5,101 +5,69 @@
     font-family:'Plus Jakarta Sans', sans-serif;
 }
 
+html,
+body{
+    overflow-x:hidden;
+}
+
+.footer{
+    width:100%;
+    margin:0;
+    padding-left:0;
+    padding-right:0;
+}
+
 body{
     background:#f7f7f7;
 }
 
 .hero{
-    min-height:400px;
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    position:relative;
+    overflow:hidden;
     text-align:center;
-    padding:220px 20px 80px;
+    padding:220px 20px 120px;
+background:#eef6f2;
 }
 
 .hero-content{
-    max-width:900px;
+    max-width:1000px;
     margin:auto;
+}
+
+.hero-badge{
+    display:inline-block;
+    padding:10px 18px;
+    border-radius:999px;
+    background:#dff3df;
+    color:#0d5132;
+    font-size:13px;
+    font-weight:600;
+    margin-bottom:30px;
 }
 
 .hero h1{
-    font-size:clamp(40px,6vw,72px);
-    font-weight:800;
-    line-height:1.1;
-    margin-bottom:20px;
-        color:#111;
+    font-family:'Plus Jakarta Sans', sans-serif;
+    font-size:clamp(60px,7vw,88px);
+    font-weight:700;
+    line-height:1.05;
+    color:#05291f;
+    letter-spacing:-2px;
+    margin-bottom:25px;
+}
 
+.hero h1 span{
+    font-family:'Plus Jakarta Sans', sans-serif;
+    color:#06251c;
 }
 
 .hero p{
-    font-size:20px;
-    max-width:700px;
+    max-width:800px;
     margin:auto;
-    color:#555;
-}
-
-.portfolio{
-    max-width:1400px;
-    margin:auto;
-    padding:20px;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
-    gap:30px;
-}
-
-.flyer-card{
-    overflow:hidden;
-    border-radius:20px;
-    background:white;
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
-    transition:.3s;
-}
-
-.flyer-card:hover{
-    transform:translateY(-10px);
-}
-
-.flyer-card img{
-    width:100%;
-    display:block;
-    transition:.4s ease;
-}
-
-.flyer-card:hover img{
-    transform:scale(1.03);
-}
-
-.category-title{
-    text-align:center;
-     margin:60px auto 40px;
-    max-width:900px;
-    padding:0 20px;
-    position:relative;
-}
-
-.category-title::after{
-    content:"";
-    display:block;
-    width:80px;
-    height:4px;
-    background:#d9ad26;
-    margin:20px auto 0;
-    border-radius:999px;
-}
-
-.category-title h2{
-    font-size:clamp(2.5rem,4vw,4rem);
-    font-weight:800;
-    letter-spacing:-2px;
-    color:#1d1d1d;
-    margin-bottom:12px;
-}
-
-.category-title p{
-    color:#666;
     font-size:18px;
+    color:#5d6d7e;
+    line-height:1.8;
 }
+
 
 .swiper{
     width:90%;
@@ -113,25 +81,27 @@ body{
 }
 
 .swiper-slide{
-    border-radius:20px;
+    border-radius:22px;
     overflow:hidden;
-    transition:.3s ease;
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+    transition:.35s;
+    background:#fff;
 }
 
 .swiper-slide:hover{
     transform:translateY(-12px);
-    box-shadow:0 20px 40px rgba(0,0,0,.15);
+    box-shadow:0 25px 50px rgba(0,0,0,.15);
 }
+
 
 .swiper-slide img{
     width:100%;
     display:block;
-    transition:.4s ease;
+    transition:.4s;
 }
 
 .swiper-slide:hover img{
-    transform:scale(1.03);
+    transform:scale(1.04);
 }
 
 .swiper-button-next,
@@ -154,26 +124,117 @@ body{
     margin-bottom:120px;
 }
 
-@media (max-width: 768px){
+.flyer-section{
+    max-width:1400px;
+    margin:100px auto;
+    padding:0 20px;
+}
+
+.section-heading{
+    border-left:5px solid #d9ad26;
+    padding-left:20px;
+    margin-bottom:50px;
+}
+
+.section-heading h2{
+    font-family:'Plus Jakarta Sans', sans-serif;
+    font-size:56px;
+    color:#05291f;
+    margin-bottom:10px;
+}
+
+.section-heading p{
+    color:#667085;
+    max-width:700px;
+}
+
+
+.flyer-card{
+    background:#fff;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.35s;
+}
+
+.flyer-card:hover{
+    transform:translateY(-10px);
+}
+
+.flyer-card img{
+    width:100%;
+    display:block;
+}
+
+.flyer-info{
+    padding:25px;
+}
+
+.flyer-info span{
+    display:block;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:1px;
+    color:#8f8f8f;
+    margin-bottom:12px;
+}
+
+.flyer-info h3{
+    font-family:'Plus Jakarta Sans', sans-serif;
+    font-size:36px;
+    color:#05291f;
+    margin-bottom:15px;
+    line-height:1.2;
+    min-height:90px;
+}
+
+.flyer-info p{
+    color:#667085;
+    line-height:1.7;
+    min-height:80px;
+}
+
+@media(max-width:991px){
+
+    .section-heading h2{
+        font-size:42px;
+    }
+
+    .flyer-info h3{
+        font-size:28px;
+    }
+}
+
+@media (max-width:768px){
 
     .hero{
-        padding:180px 20px 50px;
+        padding:180px 20px 80px;
     }
 
     .hero h1{
-        font-size:36px;
+        font-size:48px;
     }
 
     .hero p{
         font-size:16px;
     }
 
-    .portfolio{
-        grid-template-columns:1fr;
-        gap:20px;
+    .swiper{
+        padding-left:20px;
+        padding-right:20px;
+        padding-bottom:80px;
     }
 
-    .flyer-card{
-        border-radius:15px;
+    .section-heading h2{
+        font-size:38px;
+    }
+
+    .flyer-info h3{
+        min-height:auto;
+        font-size:26px;
+    }
+
+    .flyer-info p{
+        min-height:auto;
     }
 }
