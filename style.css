@@ -1319,6 +1319,309 @@ margin-top:50px;
   margin:auto;
 }
 
+#chat-toggle{
+position:fixed;
+bottom:80px;
+right:20px;
+width:65px;
+height:65px;
+border-radius:50%;
+background:#0b4cff;
+color:#fff;
+font-size:28px;
+display:flex;
+align-items:center;
+justify-content:center;
+cursor:pointer;
+z-index:99999;
+box-shadow:0 10px 30px rgba(0,0,0,.25);
+transition:.3s ease;
+}
+
+#chat-toggle:hover{
+
+transform:
+translateY(-5px)
+scale(1.08);
+
+box-shadow:
+0 20px 40px rgba(0,0,0,.25);
+
+}
+
+#chat-toggle::before{
+
+content:"";
+
+position:absolute;
+
+width:100%;
+height:100%;
+
+border-radius:50%;
+
+background:#0b4cff;
+
+animation:pulse 2s infinite;
+
+z-index:-1;
+
+}
+
+@keyframes pulse{
+
+0%{
+transform:scale(1);
+opacity:.7;
+}
+
+70%{
+transform:scale(1.5);
+opacity:0;
+}
+
+100%{
+opacity:0;
+}
+
+}
+
+/* =========================
+   CHATBOT ANIMATIONS
+========================= */
+
+#chatbot{
+position:fixed;
+bottom:95px;
+right:20px;
+width:350px;
+background:#fff;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 15px 40px rgba(0,0,0,.18);
+z-index:99999;
+font-family:'Plus Jakarta Sans',sans-serif;
+
+transform:translateY(20px);
+opacity:0;
+pointer-events:none;
+
+transition:
+transform .35s ease,
+opacity .35s ease;
+}
+
+/* OPEN STATE */
+
+#chatbot.show{
+transform:translateY(0);
+opacity:1;
+pointer-events:auto;
+}
+
+/* =========================
+   COMPANY CARD
+========================= */
+
+.company-card{
+display:flex;
+align-items:center;
+gap:12px;
+padding:15px;
+background:#fff;
+border-bottom:1px solid #eee;
+}
+
+.company-logo{
+width:45px;
+height:45px;
+object-fit:contain;
+}
+
+.company-card h3{
+margin:0;
+font-size:15px;
+font-weight:700;
+color:#001b3b;
+}
+
+.company-card p{
+margin:3px 0 0;
+font-size:12px;
+color:#666;
+}
+
+/* =========================
+   DATE
+========================= */
+
+.chat-date{
+text-align:center;
+font-size:11px;
+font-weight:600;
+color:#999;
+padding:10px;
+background:#fafafa;
+border-bottom:1px solid #eee;
+}
+
+/* =========================
+   CHAT BADGE
+========================= */
+
+.chat-badge{
+position:absolute;
+top:-4px;
+right:-4px;
+width:20px;
+height:20px;
+border-radius:50%;
+background:#ff3b30;
+color:#fff;
+font-size:11px;
+font-weight:700;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+/* =========================
+   CLOSE BUTTON
+========================= */
+
+#chat-close{
+background:none;
+border:none;
+color:#fff;
+font-size:18px;
+cursor:pointer;
+transition:.2s ease;
+}
+
+#chat-close:hover{
+transform:scale(1.15);
+}
+
+/* =========================
+   SEND BUTTON
+========================= */
+
+#chat-input button{
+border:none;
+padding:0 18px;
+background:#0b4cff;
+color:#fff;
+font-weight:600;
+cursor:pointer;
+transition:.2s ease;
+}
+
+#chat-input button:hover{
+opacity:.9;
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+#chat-messages::-webkit-scrollbar{
+width:6px;
+}
+
+#chat-messages::-webkit-scrollbar-thumb{
+background:#cfcfcf;
+border-radius:20px;
+}
+
+.bot-avatar{
+width:42px;
+height:42px;
+min-width:42px;
+border-radius:50%;
+object-fit:cover;
+display:block;
+}
+
+.message-row{
+display:flex;
+align-items:flex-end;
+gap:10px;
+margin-bottom:15px;
+}
+
+.bot-bubble{
+background:#ececec;
+padding:12px 14px;
+border-radius:15px;
+max-width:250px;
+line-height:1.5;
+font-size:14px;
+}
+
+.user-row{
+display:flex;
+justify-content:flex-end;
+margin-bottom:15px;
+}
+
+.user-bubble{
+background:#001b3b;
+color:#fff;
+padding:12px 14px;
+border-radius:15px;
+max-width:250px;
+line-height:1.5;
+font-size:14px;
+}
+
+#chat-header{
+background:#0b4cff;
+color:white;
+padding:15px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+font-weight:700;
+}
+
+#chat-messages{
+height:380px;
+overflow-y:auto;
+padding:15px;
+background:#f7f7f7;
+}
+
+#chat-input{
+display:flex;
+border-top:1px solid #eee;
+}
+
+#chat-input input{
+flex:1;
+padding:12px;
+border:none;
+outline:none;
+font-size:14px;
+}
+
+.quick-buttons{
+margin-top:12px;
+display:flex;
+flex-direction:column;
+gap:8px;
+}
+
+.quick-buttons button{
+background:#001b3b;
+color:white;
+border:none;
+padding:10px;
+border-radius:8px;
+cursor:pointer;
+font-size:13px;
+font-weight:600;
+}
+
 /* MOBILE */
 
 @media(max-width:768px){
@@ -1642,17 +1945,11 @@ margin-top:50px;
   }
 }
 
-/* CHATBOT */
-#boei_button{
-  bottom:105px !important;
-  right:22px !important;
-}
-
 /* SCROLL TOP BUTTON */
 #topBtn{
   position:fixed;
 
-  bottom:30px;
+  bottom:10px;
   right:22px;
 
   width:58px;

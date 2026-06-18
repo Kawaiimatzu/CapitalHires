@@ -1184,6 +1184,137 @@ placeholder="What tasks or support do you need help with?"></textarea>
 
 </footer>
 
+<!-- CHAT ICON -->
+
+<div id="chat-toggle">
+  💬
+  <span class="chat-badge">1</span>
+</div>
+
+<!-- CHATBOT -->
+
+<div id="chatbot" class="hidden">
+
+  <div id="chat-header">
+
+    <span>
+      How can we help you?
+    </span>
+
+    <button id="chat-close">
+      ✕
+    </button>
+
+  </div>
+
+  <!-- COMPANY CARD -->
+
+  <div class="company-card">
+
+    <img
+    src="images/logo.png"
+    class="company-logo">
+
+    <div>
+
+      <h3>CapitalHires</h3>
+
+      <p>
+        Need help? Ask our virtual assistant.
+      </p>
+
+    </div>
+
+  </div>
+
+  <!-- DATE -->
+
+  <div class="chat-date">
+
+    JUNE 19 2026, 2:00 AM
+
+  </div>
+
+  <!-- CHAT MESSAGES -->
+
+  <div id="chat-messages">
+
+    <div class="message-row">
+
+      <img
+      src="images/bot.png"
+      class="bot-avatar">
+
+      <div class="bot-bubble">
+
+        Hi! My name is Chloe and I'm here to assist you today.
+
+      </div>
+
+    </div>
+
+    <div class="message-row">
+
+      <img
+      src="images/bot.png"
+      class="bot-avatar">
+
+      <div class="bot-bubble">
+
+        As I send you messages, there will be button options you can choose from to reply.
+
+<div class="quick-buttons">
+
+<button onclick="reply('gotit')">
+Great, got it!
+</button>
+
+</div>
+
+<br>
+
+<p style="
+font-size:12px;
+color:#666;
+text-align:center;
+margin-top:10px;
+">
+
+Need immediate assistance?
+
+<br>
+
+Email us at
+
+<a href="mailto:info@capitalhires.com">
+info@capitalhires.com
+</a>
+
+</p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- INPUT -->
+
+  <div id="chat-input">
+
+    <input
+    type="text"
+    id="userInput"
+    placeholder="Type a message...">
+
+    <button onclick="sendMessage()">
+      Send
+    </button>
+
+  </div>
+
+</div>
+
   <!-- SCROLL TOP -->
 
   <button id="topBtn">↑</button>
@@ -1193,10 +1324,7 @@ placeholder="What tasks or support do you need help with?"></textarea>
   <script src="script.js"></script>
   
 
-<script
-src="https://app.boei.help/embed/k/aa28f01c-2311-4e88-b6f3-ee5b91e9c061"
-async>
-</script>
+
 
 <script src="form/form.js"></script>
 
