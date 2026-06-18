@@ -1393,7 +1393,7 @@ opacity:0;
 #chatbot{
 position:fixed;
 bottom:95px;
-right:20px;
+right:90px;
 width:350px;
 background:#fff;
 border-radius:18px;
@@ -1552,8 +1552,8 @@ margin-bottom:15px;
 .bot-bubble{
 background:#ececec;
 padding:12px 14px;
-border-radius:15px;
-max-width:250px;
+border-radius:16px;
+max-width:200px;
 line-height:1.5;
 font-size:14px;
 }

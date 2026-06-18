@@ -168,6 +168,7 @@ chatbot.classList.toggle("show");
 
 /* CHATBOT */
 
+
 function reply(type){
 
 const chat =
@@ -700,5 +701,47 @@ chatClose.addEventListener("click",()=>{
 chatbot.classList.remove("show");
 
 });
+
+}
+
+/* Date and time */
+
+function updateChatDate(){
+
+const dateElement =
+document.getElementById("chatDate");
+
+const now = new Date();
+
+dateElement.innerHTML =
+now.toLocaleString("en-US",{
+month:"long",
+day:"numeric",
+year:"numeric",
+hour:"numeric",
+minute:"2-digit"
+});
+
+}
+
+
+/* Load saved chat */
+
+updateChatDate();
+
+localStorage.setItem(
+"capitalhiresChat",
+chat.innerHTML
+);
+
+const savedChat =
+localStorage.getItem(
+"capitalhiresChat"
+);
+
+if(savedChat){
+
+chat.innerHTML =
+savedChat;
 
 }
