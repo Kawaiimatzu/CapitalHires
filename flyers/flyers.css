@@ -98,58 +98,6 @@ body{
     line-height:1.8;
 }
 
-
-.swiper{
-    width:90%;
-    max-width:1400px;
-    margin:auto;
-    position:relative;
-
-    padding-left:60px;
-    padding-right:60px;
-    padding-bottom:120px;
-}
-
-.swiper-slide{
-    border-radius:22px;
-    overflow:hidden;
-    box-shadow:0 15px 40px rgba(0,0,0,.08);
-    transition:.35s;
-    background:#fff;
-}
-
-.swiper-slide:hover{
-    transform:translateY(-12px);
-    box-shadow:0 25px 50px rgba(0,0,0,.15);
-}
-
-
-.swiper-slide img{
-    width:100%;
-    display:block;
-    transition:.4s;
-}
-
-.swiper-slide:hover img{
-    transform:scale(1.04);
-}
-
-.swiper-button-next,
-.swiper-button-prev{
-    background:#d9ad26;
-    color:#111 !important;
-    width:55px;
-    height:55px;
-    border-radius:50%;
-    box-shadow:0 8px 20px rgba(0,0,0,.15);
-    cursor:pointer;
-}
-
-.swiper-button-next::after,
-.swiper-button-prev::after{
-    font-size:22px !important;
-    font-weight:900;
-}
 .mortgageSwiper{
     margin-bottom:120px;
 }
@@ -185,6 +133,9 @@ body{
     overflow:hidden;
     box-shadow:0 10px 30px rgba(0,0,0,.08);
     transition:.35s;
+
+    display:flex;
+    flex-direction:column;
 }
 
 .flyer-card:hover{
@@ -198,6 +149,10 @@ body{
 
 .flyer-info{
     padding:25px;
+
+    display:flex;
+    flex-direction:column;
+    flex:1;
 }
 
 .flyer-info span{
@@ -210,19 +165,513 @@ body{
 }
 
 .flyer-info h3{
-    font-family:'Plus Jakarta Sans', sans-serif;
-    font-size:36px;
+    font-size:34px;
     color:#05291f;
-    margin-bottom:15px;
-    line-height:1.2;
-    min-height:90px;
+    line-height:1.15;
+    margin-bottom:16px;
+
+    min-height:120px;
 }
 
 .flyer-info p{
     color:#667085;
-    line-height:1.7;
-    min-height:80px;
+    line-height:1.8;
+    font-size:16px;
+
+    min-height:120px;
 }
+
+.flyer-grid{
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+    margin-top:40px;
+}
+
+.flyer-review{
+    margin-top:auto;
+
+    color:#d9ad26;
+
+    font-size:15px;
+
+    font-weight:700;
+}
+
+.flyer-review span{
+
+    color:#666;
+
+    margin-left:8px;
+
+    font-weight:500;
+}
+
+.flyer-info a{
+
+    display:inline-block;
+
+    margin-top:18px;
+
+    color:#05291f;
+
+    font-weight:700;
+
+    text-decoration:none;
+
+    transition:.3s;
+}
+
+.flyer-info a:hover{
+
+    color:#d9ad26;
+
+    transform:translateX(4px);
+
+}
+
+.flyer-modal{
+
+    position:fixed;
+    inset:0;
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    background:rgba(0,0,0,.72);
+
+    padding:30px;
+
+    z-index:99999;
+
+    overflow:hidden;
+
+}
+
+.flyer-modal.show{
+
+display:flex;
+
+}
+
+.flyer-modal-box{
+
+    width:min(1280px,95vw);
+
+    height:min(92vh,900px);
+
+    background:#fff;
+
+    border-radius:24px;
+
+    display:grid;
+
+    grid-template-columns:48% 52%;
+
+    overflow:hidden;
+
+    position:relative;
+
+    box-shadow:0 35px 80px rgba(0,0,0,.25);
+
+}
+
+.modal-left{
+
+    background:#f7f7f7;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:35px;
+
+}
+
+.modal-left img{
+
+max-width:100%;
+
+max-height:80vh;
+
+width:auto;
+
+height:auto;
+
+object-fit:contain;
+
+border-radius:16px;
+
+display:block;
+
+}
+
+.modal-right::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+.modal-right::-webkit-scrollbar-thumb{
+
+    background:#d9ad26;
+
+    border-radius:999px;
+
+}
+
+.modal-right{
+
+padding:40px;
+
+overflow-y:auto;
+
+}
+
+.close-modal{
+
+position:absolute;
+
+right:20px;
+
+top:20px;
+
+font-size:35px;
+
+cursor:pointer;
+
+}
+
+.modal-rating{
+
+margin:25px 0;
+
+font-size:20px;
+
+}
+
+#reviewForm{
+
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+
+    margin-bottom:40px;
+
+}
+
+#reviewForm input,
+#reviewForm textarea,
+#reviewForm select{
+
+padding:14px;
+
+border:1px solid #ddd;
+
+border-radius:10px;
+
+font-size:15px;
+
+}
+
+#reviewForm button{
+
+background:#d9ad26;
+
+    width:100%;
+
+    padding:18px;
+
+    font-size:17px;
+
+    border-radius:999px;
+
+    transition:.3s;
+
+cursor:pointer;
+
+}
+
+#reviewForm button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 12px 30px rgba(217,173,38,.35);
+
+}
+
+.flyer-modal.show .flyer-modal-box{
+
+    animation:popup .35s ease;
+
+}
+
+@keyframes popup{
+
+0%{
+
+opacity:0;
+
+transform:scale(.94);
+
+}
+
+100%{
+
+opacity:1;
+
+transform:scale(1);
+
+}
+
+}
+
+
+.rating-select{
+
+display:flex;
+
+gap:8px;
+
+font-size:34px;
+
+margin:5px 0 15px;
+
+}
+
+.rating-select .star{
+
+cursor:pointer;
+
+color:#d8d8d8;
+
+transition:.25s;
+
+user-select:none;
+
+}
+
+.rating-select .star.active{
+
+color:#d9ad26;
+
+}
+
+.rating-select .star:hover{
+
+transform:scale(1.15);
+
+}
+
+.average-stars{
+
+    font-size:28px;
+    color:#d9ad26;
+    letter-spacing:4px;
+
+}
+
+.rating-summary{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-top:10px;
+}
+
+.rating-number{
+    font-size:34px;
+    font-weight:800;
+    color:#111;
+}
+
+.rating-text{
+    color:#666;
+    font-size:15px;
+}
+
+.review-card{
+
+    background:#fff;
+
+    border:1px solid #ececec;
+
+    border-radius:16px;
+
+    padding:18px;
+
+    margin-top:18px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.05);
+
+}
+
+#reviewsList{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+    margin-top:20px;
+
+    padding-bottom:20px;
+
+}
+
+.review-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.review-avatar{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    background:#d9ad26;
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+    font-size:18px;
+}
+
+.review-name{
+    font-weight:700;
+    font-size:17px;
+}
+
+.review-date{
+    color:#888;
+    font-size:13px;
+}
+
+.review-stars{
+    color:#d9ad26;
+    margin:12px 0;
+    font-size:18px;
+}
+
+.review-toolbar{
+
+    display:flex;
+    justify-content:flex-end;
+    margin:20px 0;
+
+}
+
+.review-toolbar select{
+
+    padding:12px 18px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    background:#fff;
+    font-size:15px;
+    cursor:pointer;
+    transition:.25s;
+
+}
+
+.review-toolbar select:hover{
+
+    border-color:#d9ad26;
+
+}
+
+.review-toolbar select:focus{
+
+    outline:none;
+    border-color:#d9ad26;
+    box-shadow:0 0 0 3px rgba(217,173,38,.15);
+
+}
+
+.verified-badge{
+
+    background:#e9f8ef;
+    color:#157347;
+
+    padding:6px 12px;
+
+    border-radius:999px;
+
+    font-size:12px;
+
+    font-weight:700;
+
+}
+
+.review-card{
+
+    background:#fff;
+
+    border:1px solid #ececec;
+
+    border-radius:18px;
+
+    padding:22px;
+
+    transition:.3s;
+
+}
+
+.review-card:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 14px 35px rgba(0,0,0,.08);
+
+}
+
+.review-card p{
+
+    color:#555;
+
+    line-height:1.8;
+
+    margin-top:8px;
+
+}
+
+@media(max-width:900px){
+
+.flyer-modal-box{
+
+grid-template-columns:1fr;
+
+}
+
+.modal-left{
+
+padding:20px;
+
+}
+
+.modal-right{
+
+padding:25px;
+
+}
+
+}
+
+@media(max-width:1200px){
+
+    .flyer-grid{
+        grid-template-columns:repeat(3,1fr);
+    }
+
+}
+
 
 @media(max-width:991px){
 
@@ -232,6 +681,10 @@ body{
 
     .flyer-info h3{
         font-size:28px;
+    }
+
+        .flyer-grid{
+        grid-template-columns:repeat(2,1fr);
     }
 }
 
@@ -249,12 +702,6 @@ body{
         font-size:16px;
     }
 
-    .swiper{
-        padding-left:20px;
-        padding-right:20px;
-        padding-bottom:80px;
-    }
-
     .section-heading h2{
         font-size:38px;
     }
@@ -267,4 +714,12 @@ body{
     .flyer-info p{
         min-height:auto;
     }
+}
+
+@media(max-width:600px){
+
+    .flyer-grid{
+        grid-template-columns:1fr;
+    }
+
 }
