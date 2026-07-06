@@ -192,22 +192,69 @@ body{
 }
 
 .flyer-review{
+
     margin-top:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:4px;
+
+}
+
+.flyer-top-rating{
+
+    display:flex;
+
+    align-items:baseline;
+
+    gap:8px;
+
+}
+
+.flyer-info .flyer-stars{
+
+    display:inline-flex;
+
+    align-items:center;
 
     color:#d9ad26;
 
-    font-size:15px;
+    font-size:18px;
 
-    font-weight:700;
+    line-height:1;
+
+    letter-spacing:2px;
+
+    margin:0;
+
 }
 
-.flyer-review span{
+.flyer-rating{
 
-    color:#666;
+    font-size:16px;
 
-    margin-left:8px;
+    font-weight:700;
+
+    color:#05291f;
+
+    position:relative;
+
+    top:1px;
+
+}
+
+.flyer-count{
+
+    font-size:13px;
+
+    color:#7b7b7b;
 
     font-weight:500;
+
 }
 
 .flyer-info a{

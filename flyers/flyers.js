@@ -94,6 +94,8 @@ viewButtons.forEach(button => {
 
         loadReviews(title);
 
+        loadFlyerRatings();
+
     });
 
 });
@@ -117,6 +119,8 @@ modal.onclick = e => {
 ratingFilter.addEventListener("change",()=>{
 
     loadReviews(modalTitle.textContent);
+
+    loadFlyerRatings();
 
 });
 
@@ -302,6 +306,79 @@ html += `
         reviewCount.textContent = "(0 Reviews)";
 
     }
+
+}
+
+async function loadFlyerRatings(){
+
+    const snapshot = await getDocs(collection(db,"reviews"));
+
+    const ratings = {};
+
+    snapshot.forEach(doc=>{
+
+        const review = doc.data();
+
+        if(!ratings[review.flyer]){
+
+            ratings[review.flyer]={
+                total:0,
+                count:0
+            };
+
+        }
+
+        ratings[review.flyer].total+=review.rating;
+        ratings[review.flyer].count++;
+
+    });
+
+    document.querySelectorAll(".flyer-card").forEach(card=>{
+
+        const title = card.querySelector("h3").textContent;
+
+        const stars = card.querySelector(".flyer-stars");
+        const rating = card.querySelector(".flyer-rating");
+        const count = card.querySelector(".flyer-count");
+
+if(ratings[title]){
+
+    const avg = (
+        ratings[title].total /
+        ratings[title].count
+    );
+
+    rating.textContent = avg.toFixed(1);
+
+count.textContent =
+`${ratings[title].count} Verified Reviews`;
+
+    const stars = card.querySelector(".flyer-stars");
+
+    stars.innerHTML = getStars(avg);
+
+} else{
+
+rating.textContent = "0.0";
+
+count.textContent = "No Reviews";
+
+stars.innerHTML = "☆☆☆☆☆";
+
+        }
+
+    });
+
+}
+
+loadFlyerRatings();
+
+function getStars(rating){
+
+    const full = Math.round(rating);
+
+    return "★".repeat(full) +
+           "☆".repeat(5-full);
 
 }
 
